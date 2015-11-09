@@ -17,7 +17,7 @@ var animLoopHandle;
 var spin = -Math.PI;
 var enemySpin = -Math.PI;
 var mobile = false;
-
+// Commentaire
 var debug = function(args) {
     if (console && console.log) {
         console.log(args);
