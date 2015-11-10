@@ -1,9 +1,10 @@
-Ajout du score dans le classement
-Changer la couleur de fond
-Ajouter la photo
+ajouter la photo
 bug de la division, blob qui disparait et ne se réassemble pas
 
 
 
 fait:
 Traduire le chat
+Changer la couleur de fond
+Ajout du score dans le classement
+changer name page
