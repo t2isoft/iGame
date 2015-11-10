@@ -1,5 +1,9 @@
 Ajout du score dans le classement
-Traduire le chat
 Changer la couleur de fond
 Ajouter la photo
 bug de la division, blob qui disparait et ne se réassemble pas
+
+
+
+fait:
+Traduire le chat
