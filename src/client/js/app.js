@@ -522,7 +522,7 @@ function setupSocket(socket) {
             status += '<br />';
             if (leaderboard[i].id == player.id){
                 if(leaderboard[i].name.length !== 0)
-                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name + ' ' + leaderboard[i].mass + "</span>";
+                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name +  "</span>";
                 else 
                     status += '<span class="me">' + (i + 1) + ". A cell unnamed</span>";
             } else {
