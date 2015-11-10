@@ -4,6 +4,7 @@ Ajout de logo page d'accueil
 modifier page d'accueil
 
 fait:
+Mettre en Dark par défaut.
 Traduire le chat
 Changer la couleur de fond
 Ajout du score dans le classement
