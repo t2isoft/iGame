@@ -117,8 +117,8 @@ var kicked = false;
 var continuity = false;
 var startPingTime = 0;
 var toggleMassState = 0;
-var backgroundColor = '#f2fbff';
-var lineColor = '#000000';
+var backgroundColor = '#181818';
+var lineColor = '#181818';
 
 var foodConfig = {
     border: 0,
