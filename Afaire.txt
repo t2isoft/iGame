@@ -1,5 +1,4 @@
 ajouter la photo
-Mettre en dark par défaut.
 Ajout de logo page d'accueil
 modifier page d'accueil
 
