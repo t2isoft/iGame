@@ -8,3 +8,4 @@ Traduire le chat
 Changer la couleur de fond
 Ajout du score dans le classement
 changer name page
+changer couleur food
