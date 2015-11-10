@@ -1,7 +1,7 @@
 ajouter la photo
-bug de la division, blob qui disparait et ne se réassemble pas
-
-
+Mettre en dark par défaut.
+Ajout de logo page d'accueil
+modifier page d'accueil
 
 fait:
 Traduire le chat
