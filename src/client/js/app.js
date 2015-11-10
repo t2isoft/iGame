@@ -243,7 +243,7 @@ ChatClient.prototype.sendChat = function (key) {
                 if (commands[args[0]]) {
                     commands[args[0]].callback(args.slice(1));
                 } else {
-                    this.addSystemLine('Unrecoginised Command: ' + text + ', type -help for more info');
+                    this.addSystemLine('Commande invalide : ' + text + ', taper -help pour plus d\'information');
                 }
 
             // just a regular message - send along to server
@@ -426,35 +426,35 @@ function toggleContinuity(args) {
 // TODO
 // Break out many of these game controls into a separate class
 
-chat.registerCommand('ping', 'Check your latency', function () {
+chat.registerCommand('ping', 'Vérifie votre latence', function () {
     checkLatency();
 });
 
-chat.registerCommand('dark', 'Toggle dark mode', function () {
+chat.registerCommand('dark', 'Affiche le mode nuit', function () {
     toggleDarkMode();
 });
 
-chat.registerCommand('border', 'Toggle border', function () {
+chat.registerCommand('border', 'Affiche les limites', function () {
     toggleBorder();
 });
 
-chat.registerCommand('mass', 'View mass', function () {
+chat.registerCommand('mass', 'Affiche la masse', function () {
     toggleMass();
 });
 
-chat.registerCommand('continuity', 'Toggle continuity', function () {
+chat.registerCommand('continuity', 'Affiche la continuité', function () {
     toggleContinuity();
 });
 
-chat.registerCommand('help', 'Chat commands information', function () {
+chat.registerCommand('help', 'Information sur les différentes commande', function () {
     chat.printHelp();
 });
 
-chat.registerCommand('login', 'Login as an admin', function (args) {
+chat.registerCommand('login', 'Se connecter en administrateur', function (args) {
     socket.emit('pass', args);
 });
 
-chat.registerCommand('kick', 'Kick a player', function (args) {
+chat.registerCommand('kick', 'Bannir un joueur', function (args) {
     socket.emit('kick', args);
 });
 
@@ -489,8 +489,8 @@ function setupSocket(socket) {
         socket.emit('gotit', player);
         gameStart = true;
         debug('Game is started: ' + gameStart);
-        chat.addSystemLine('Connected to the game!');
-        chat.addSystemLine('Type <b>-help</b> for a list of commands');
+        chat.addSystemLine('Connecté au jeu!');
+        chat.addSystemLine('Taper <b>-help</b> pour la liste des commandes');
         if (mobile) {
             document.getElementById('gameAreaWrapper').removeChild(document.getElementById('chatbox'));
         }
@@ -504,15 +504,15 @@ function setupSocket(socket) {
     });
 
     socket.on('playerDied', function (data) {
-        chat.addSystemLine('Player <b>' + data.name + '</b> died!');
+        chat.addSystemLine('Joueur <b>' + data.name + '</b> mort!');
     });
 
     socket.on('playerDisconnect', function (data) {
-        chat.addSystemLine('Player <b>' + data.name + '</b> disconnected!');
+        chat.addSystemLine('Joueur <b>' + data.name + '</b> déconnecté!');
     });
 
     socket.on('playerJoin', function (data) {
-        chat.addSystemLine('Player <b>' + data.name + '</b> joined!');
+        chat.addSystemLine('Joueur <b>' + data.name + '</b> à rejoint la partie!');
     });
 
     socket.on('leaderboard', function (data) {
@@ -524,12 +524,12 @@ function setupSocket(socket) {
                 if(leaderboard[i].name.length !== 0)
                     status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name +  "</span>";
                 else 
-                    status += '<span class="me">' + (i + 1) + ". A cell unnamed</span>";
+                    status += '<span class="me">' + (i + 1) + ". Cellule sans nom</span>";
             } else {
                 if(leaderboard[i].name.length !== 0)
                     status += (i + 1) + '. ' + leaderboard[i].name;
                 else
-                    status += (i + 1) + '. A cell unnamed';
+                    status += (i + 1) + '. Cellule sans nom';
             }
         }
         //status += '<br />Players: ' + data.players;
