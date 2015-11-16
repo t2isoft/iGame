@@ -376,22 +376,22 @@ function checkLatency() {
     socket.emit('ping');
 }
 
-function toggleDarkMode() {
-    var LIGHT = '#f2fbff',
-        DARK = '#181818';
-    var LINELIGHT = '#000000',
-        LINEDARK = '#ffffff';
+// function toggleDarkMode() {
+//     var LIGHT = '#f2fbff',
+//         DARK = '#181818';
+//     var LINELIGHT = '#000000',
+//         LINEDARK = '#ffffff';
 
-    if (backgroundColor === LIGHT) {
-        backgroundColor = DARK;
-        lineColor = LINEDARK;
-        chat.addSystemLine('Dark mode enabled');
-    } else {
-        backgroundColor = LIGHT;
-        lineColor = LINELIGHT;
-        chat.addSystemLine('Dark mode disabled');
-    }
-}
+//     if (backgroundColor === LIGHT) {
+//         backgroundColor = DARK;
+//         lineColor = LINEDARK;
+//         chat.addSystemLine('Dark mode enabled');
+//     } else {
+//         backgroundColor = LIGHT;
+//         lineColor = LINELIGHT;
+//         chat.addSystemLine('Dark mode disabled');
+//     }
+// }
 
 function toggleBorder(args) {
     if (!borderDraw) {
@@ -830,7 +830,7 @@ function gameLoop() {
         graph.fillRect(0, 0, screenWidth, screenHeight);
 
         graph.textAlign = 'center';
-        graph.fillStyle = '#FFFFFF';
+        graph.fillStyle = '#333333';
         graph.font = 'bold 30px sans-serif';
         graph.fillText('You died!', screenWidth / 2, screenHeight / 2);
     }
@@ -838,7 +838,7 @@ function gameLoop() {
         if (gameStart) {
             graph.fillStyle = backgroundColor;
             graph.fillRect(0, 0, screenWidth, screenHeight);
-            drawgrid();
+            //drawgrid();
 
             foods.forEach(function(food) {
                 drawFood(food);

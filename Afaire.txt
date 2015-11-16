@@ -1,6 +1,7 @@
 ajouter la photo
 Ajout de logo page d'accueil
 modifier page d'accueil
+Plan d'action
 
 fait:
 Mettre en Dark par défaut.
