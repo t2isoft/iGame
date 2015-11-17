@@ -1,5 +1,4 @@
-ajouter la photo
-Plan d'action
+ajouter bruitage lors de l'ingestion
 
 fait:
 Fond noire
