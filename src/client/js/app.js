@@ -288,6 +288,8 @@ function keyInput(event) {
     else if(key === KEY_SPLIT && reenviar) {
         socket.emit('2');
         reenviar = false;
+        var audio = new Audio('http://www.soundjay.com/nature/sounds/water-droplet-1.wav');
+        audio.play();
     }
 }
 
@@ -522,7 +524,7 @@ function setupSocket(socket) {
             status += '<br />';
             if (leaderboard[i].id == player.id){
                 if(leaderboard[i].name.length !== 0)
-                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name +  " Score:"+  users[i].massTotal   +"</span>";
+                    status += '<span class="me">' + (i + 1) + '. ' + leaderboard[i].name +  " Score:"+  users[i].massTotal   + "</span>";
                 else 
                     status += '<span class="me">' + (i + 1) + ". Cellule sans nom</span>";
             } else {

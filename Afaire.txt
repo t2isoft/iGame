@@ -1,6 +1,8 @@
 ajouter bruitage lors de l'ingestion
 
 fait:
+audio
+couleur/forme unique
 Fond noire
 modifier page d'accueil
 Ajout de logo page d'accueil

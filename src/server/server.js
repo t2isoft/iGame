@@ -49,8 +49,8 @@ function addFood(toAdd) {
             y: position.y,
             radius: radius,
             mass: Math.random() + 2,
-            hue: Math.round(Math.random() * 360),
-            sides: 5 + Math.round(Math.random() * 3)
+            hue:  Math.round(Math.random() * 360),
+            sides: 15,//+ Math.round(Math.random() * 3)
         });
     }
 }
@@ -298,7 +298,7 @@ io.on('connection', function (socket) {
     socket.on('disconnect', function () {
         if (util.findIndex(users, currentPlayer.id) > -1)
             users.splice(util.findIndex(users, currentPlayer.id), 1);
-        console.log('User #' + currentPlayer.id + ' disconnected');
+        console.log('User #' + currentPlayer.id + ' déconnecté !');
 
         socket.broadcast.emit('playerDisconnect', { name: currentPlayer.name });
     });
@@ -399,6 +399,7 @@ io.on('connection', function (socket) {
             }
         }
     });
+
     socket.on('2', function() {
         //Split cells
         if(currentPlayer.cells.length < c.limitSplit && currentPlayer.massTotal >= c.defaultPlayerMass*2) {
@@ -527,7 +528,6 @@ function tickPlayer(currentPlayer) {
         currentPlayer.massTotal += masaGanada;
         currentCell.radius = util.massToRadius(currentCell.mass);
         playerCircle.r = currentCell.radius;
-
         tree.clear();
         tree.insert(users);
         var playerCollisions = [];
